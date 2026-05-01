@@ -1,0 +1,334 @@
+/* --- Font Faces --- */
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 25 UltLt';
+  src: url('../fonts/HelveticaNeueLTPro-UltLt.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT Pro 45 Lt';
+  src: url('../fonts/HelveticaNeueLTPro-Lt.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueBody';
+  src: url('../fonts/HelveticaNeueLTPro-Roman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16pt;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  line-height: 1.0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-width: 320px;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  background-color: #E7E7E7;
+  font-family: 'HelveticaNeueBody', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* --- Site Wrapper — centers the card --- */
+.site-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 2rem 1rem;
+}
+
+/* --- Card --- */
+.card {
+  background: #FFFFFF;
+  border-radius: 2.5rem;
+  max-width: 56rem;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================
+   Header Section
+   ======================================== */
+.card-header {
+  background: #4D4D4D;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 4rem;
+}
+
+.header-left {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #F6F6F6;
+}
+
+.profile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.header-right h1 {
+  font-size: 3em;
+  line-height: 1.15;
+  letter-spacing: -0.05rem;
+  color: #F6F6F6;
+}
+
+.name-light {
+  font-family: 'HelveticaNeueLT Pro 25 UltLt', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.name-regular {
+  font-family: 'HelveticaNeueLT Pro 45 Lt', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  font-size: 1.3em;
+  line-height: 1.5;
+  color: #F6F6F6;
+  font-family: 'HelveticaNeueLT Pro 45 Lt', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+/* ========================================
+   Body Section
+   ======================================== */
+.card-body {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.body-left,
+.body-right {
+  padding: 3rem 3rem;
+}
+
+.body-left {
+  flex: 1;
+}
+
+.body-right {
+  flex: 0 0 40%;
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card-body h2 {
+  font-size: 1.5em;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+  color: #4D4D4D;
+  font-family: 'HelveticaNeueLT Pro 45 Lt', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #777777;
+  font-family: 'HelveticaNeueBody', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.description p + p {
+  margin-top: 1rem;
+}
+
+.contact-subline {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #777777;
+  font-family: 'HelveticaNeueBody', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-top: -0.5rem;
+}
+
+/* --- Buttons --- */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 2.25rem;
+  padding: 0 1rem;
+  font-family: 'HelveticaNeueLT Pro 45 Lt', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  border-radius: 3rem;
+  color: #4D4D4D;
+  border: 1px solid #4D4D4D;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #FFFFFF;
+  background-color: #4D4D4D;
+  transform: scale(1.04);
+}
+
+.btn:hover svg {
+  fill: #FFFFFF;
+}
+
+.btn:hover {
+  transform: scale(1.035);
+}
+
+.btn svg {
+  display: block;
+  fill: #4D4D4D;
+  flex-shrink: 0;
+  height: 1em;
+  width: 1em;
+  margin-right: 0.5rem;
+  transition: fill 0.2s ease;
+}
+
+/* ========================================
+   Footer Section
+   ======================================== */
+.card-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 2rem 4rem;
+  text-align: center;
+  font-size: 0.875em;
+  line-height: 1.5;
+  color: #777777;
+  font-family: 'HelveticaNeueBody', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.company-name {
+  color: #4D4D4D;
+  font-weight: 400;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 980px) {
+  html {
+    font-size: 14pt;
+  }
+}
+
+@media (max-width: 736px) {
+  html {
+    font-size: 14pt;
+  }
+
+  .site-wrapper {
+    padding: 1rem 0.75rem;
+  }
+
+  .card {
+    border-radius: 1.75rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .profile-photo {
+    width: 6.75rem;
+    height: 6.75rem;
+  }
+
+  .header-right h1 {
+    font-size: 2em;
+  }
+
+  .card-body {
+    flex-direction: column;
+  }
+
+  .body-left,
+  .body-right {
+    flex: 1;
+    padding: 2.5rem 2rem;
+  }
+
+  .body-right {
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .btn {
+    width: auto;
+    max-width: 16rem;
+  }
+
+  .card-footer {
+    padding: 2rem 2rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 13pt;
+  }
+
+  .card-header {
+    padding: 1.875rem 1.5rem;
+  }
+
+  .body-left,
+  .body-right {
+    padding: 1.875rem 1.5rem;
+  }
+
+  .card-footer {
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+  }
+}
